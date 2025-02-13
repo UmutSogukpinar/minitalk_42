@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: usogukpi <usogukpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/12 12:48:59 by usogukpi          #+#    #+#             */
-/*   Updated: 2025/02/12 18:27:13 by usogukpi         ###   ########.fr       */
+/*   Created: 2025/02/13 15:59:44 by usogukpi          #+#    #+#             */
+/*   Updated: 2025/02/13 16:49:00 by usogukpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sys/types.h"
 #include "signal.h"
-#include "minitalk.h"
-#include "printf_42/ft_printf.h"
+#include "../minitalk.h"
+#include "../printf_42/ft_printf.h"
 #include "unistd.h"
 #include "stdlib.h"
 
@@ -78,10 +78,7 @@ static void send_messages(char *message, pid_t pid)
     i = -1;
     while (message[++i])
     {
-        if ((unsigned char)message[i] <= 127)
-        {
-            send_bit(message[i], pid);
-        }
+        send_bit(message[i], pid);
     }
     send_bit('\0', pid);
 }

@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: usogukpi <usogukpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/12 12:49:01 by usogukpi          #+#    #+#             */
-/*   Updated: 2025/02/12 18:14:56 by usogukpi         ###   ########.fr       */
+/*   Created: 2025/02/13 15:59:41 by usogukpi          #+#    #+#             */
+/*   Updated: 2025/02/13 16:48:46 by usogukpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <signal.h>
 #include <unistd.h>
 #include <stdio.h>
-#include "printf_42/ft_printf.h"
+#include "../printf_42/ft_printf.h"
 
 void handle_signal(int sig, siginfo_t *info, void *context);
 
