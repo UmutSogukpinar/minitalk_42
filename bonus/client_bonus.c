@@ -6,7 +6,7 @@
 /*   By: usogukpi <usogukpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 15:59:44 by usogukpi          #+#    #+#             */
-/*   Updated: 2025/02/13 16:49:00 by usogukpi         ###   ########.fr       */
+/*   Updated: 2025/02/14 15:20:22 by usogukpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,8 @@ int main(int argc, char **argv)
         ft_printf("Error: Invalid PID\n");
         return (1);
     }
-
-    sa.sa_handler = ack_handler;
     sigemptyset(&sa.sa_mask);
+    sa.sa_handler = ack_handler;
     sa.sa_flags = SA_RESTART;
     sigaction(SIGUSR1, &sa, NULL);
 
